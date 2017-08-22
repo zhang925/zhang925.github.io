@@ -6,12 +6,26 @@
     <meta name="keywords" content="keyword1,keyword2,keyword3">
     <meta name="description" content="this is my page">
     <meta name="content-type" content="text/html; charset=UTF-8">
-<script type="text/javascript" src="js/index.js"></script>
+     <script type="text/javascript" src="js/index.js"></script>
+     
+     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css" />
+  <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+  <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$( "#date" ).datepicker();
+		});
+		
+	</script>
+  
   </head>
   <body  >
   <div >
   zhang925的个人网站测试,只支持静态的网站！
    <input id="test" type="button" value="测试一下" onclick="test()" />
+   <br/>
+   <input type="text" name="date" id="date" />
     </div>
   </body>
 </html>
