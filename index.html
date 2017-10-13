@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>跳转页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+
+  	<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script type="text/javascript">
+
+
+
+		$(function(){
+            function isUserAgentPC() {
+                var userAgent = navigator.userAgent.toLowerCase();
+                var osPC = ["mac os","window","ubuntu","linux"];
+                var osPhone = ["android","iphone","ipad"];//android 系统也有关键字 linux
+                var checkUserAgentPC = true;
+                for(var j = 0;j<osPhone.length;j++){
+                    if(userAgent.indexOf(osPhone[j])!=-1){//是手机登陆的
+                        checkUserAgentPC = false;
+                    }
+                }
+                return checkUserAgentPC;
+            }
+
+            if(isUserAgentPC()){
+                location.href="pcindex.html";
+            }else{
+                location.href="phoneindex.html";
+            }
+
+		});
+	</script>
+  </head>
+  
+  <body class="body">
+
+  </body>
+</html>
